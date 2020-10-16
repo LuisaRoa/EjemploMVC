@@ -10,10 +10,10 @@ package modelo;
  * @author luisa
  */
 public class modelo {
-    private int numeroUno;
+    private int numeroUno; //Se crean las variables a usar para la operación
     private int numeroDos;
     private int resultado;
-    public int Multiplicar(){
+    public int Multiplicar(){ //Metodo que realiza la operación
         this.resultado=this.numeroUno*this.numeroDos;
         return this.resultado;
     }

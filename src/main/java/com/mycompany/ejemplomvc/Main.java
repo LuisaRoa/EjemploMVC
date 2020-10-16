@@ -15,12 +15,12 @@ import vista.Vista;
  */
 public class Main {
     public static void main(String [] args){
-        modelo mod = new modelo();
+        modelo mod = new modelo(); //se crean los objetos de cada componente del modelo
         Vista view = new Vista();
         
-        Controlador ctrl = new Controlador(view,mod);
-        ctrl.iniciar();
-        view.setVisible(true);
+        Controlador ctrl = new Controlador(view,mod); //Se envian los objetos a la clase controlador
+        ctrl.iniciar(); //Se invoca el metodo iniciar que configura la vista
+        view.setVisible(true); 
         
     }
 }

@@ -15,22 +15,22 @@ import vista.Vista;
  * @author luisa
  */
 public class Controlador implements ActionListener{
-    private Vista view;
+    private Vista view; //Se crean las variables tipo vista y modelo
     private modelo model;
 
-    public Controlador(Vista view, modelo model) {
+    public Controlador(Vista view, modelo model) { // constructor de la clase para inicializar las variables
         this.view = view;
         this.model = model;
-        this.view.BtnMultiplicar.addActionListener(this);
+        this.view.BtnMultiplicar.addActionListener(this); //Se accede a los controles de la vista
     }
-    public void iniciar(){
+    public void iniciar(){ //En este metodo se inicia la vista y sus propiedades
         view.setTitle("Operación");
         view.setLocationRelativeTo(null);
     }
-    public void actionPerformed(ActionEvent e){
-        model.setNumeroUno(Integer.parseInt(view.TxNumero1.getText()));
+    public void actionPerformed(ActionEvent e){//Esta clase establece la función que realiza el boton
+        model.setNumeroUno(Integer.parseInt(view.TxNumero1.getText()));//Se envian los datos a la clase modelo
         model.setNumeroDos(Integer.parseInt(view.TxNumero2.getText()));
-        model.Multiplicar();
-        view.TxResultado.setText(String.valueOf(model.getResultado()));
+        model.Multiplicar(); //Se invoca el metodo que realiza la operación
+        view.TxResultado.setText(String.valueOf(model.getResultado())); // se muestra el resultado de la operacion
     }
 }
