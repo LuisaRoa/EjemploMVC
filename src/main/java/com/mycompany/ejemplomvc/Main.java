@@ -5,12 +5,22 @@
  */
 package com.mycompany.ejemplomvc;
 
+import controlador.Controlador;
+import modelo.modelo;
+import vista.Vista;
+
 /**
  *
  * @author luisa
  */
 public class Main {
     public static void main(String [] args){
-        System.out.println("Hola mundo");
+        modelo mod = new modelo();
+        Vista view = new Vista();
+        
+        Controlador ctrl = new Controlador(view,mod);
+        ctrl.iniciar();
+        view.setVisible(true);
+        
     }
 }
